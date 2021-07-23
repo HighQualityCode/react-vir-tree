@@ -40,9 +40,9 @@
     "reselect": "^3.0.1"
   },
   "peerDependencies": {
-    "react": "16.x",
-    "react-dom": "^16.2.0",
-    "react-virtualized": "^9.13.0"
+    "react": "17.x",
+    "react-dom": "^17.0.0",
+    "react-virtualized": "^9.22.0"
   },
   "devDependencies": {
     "jest": "^24.8.0",
@@ -71,7 +71,7 @@
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^16.2.0",
     "react-testing-library": "^7.0.0",
-    "react-virtualized": "^9.18.5",
+    "react-virtualized": "^9.22.3",
     "semantic-release": "^15.6.3",
     "semantic-ui-react": "^0.77.1",
     "stats-webpack-plugin": "^0.6.2",
