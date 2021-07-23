@@ -61,7 +61,7 @@
     "nwb": "^0.21.5",
     "prettier": "1.13.7",
     "prop-types": "^15.6.0",
-    "react": "^16.3.2",
+    "react": "^17.0.2",
     "react-dnd": "^2.5.4",
     "react-dnd-html5-backend": "^2.5.4",
     "react-dom": "^16.2.0",
