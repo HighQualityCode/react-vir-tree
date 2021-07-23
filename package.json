@@ -1,6 +1,6 @@
 {
   "name": "react-vir-tree",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react-virtualized-tree React component",
   "private": false,
   "publishConfig": {
