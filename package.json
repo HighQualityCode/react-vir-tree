@@ -2,6 +2,10 @@
   "name": "react-vir-tree",
   "version": "1.0.0",
   "description": "react-virtualized-tree React component",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -20,7 +24,8 @@
     "test": "node config/test/test.js --env=jsdom",
     "test:coverage": "node config/test/test.js --env=jsdom --coverage",
     "postpublish": "node config/pages",
-    "stats:analyzer": "webpack-bundle-analyzer umd/stats.json umd"
+    "stats:analyzer": "webpack-bundle-analyzer umd/stats.json umd",
+    "release": "release-it"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -120,10 +125,10 @@
     "bracketSpacing": false,
     "jsxBracketSameLine": false
   },
-  "author": "Diogo Cunha",
-  "homepage": "https://diogofcunha.github.io/react-virtualized-tree/",
+  "author": "HighQualityCode",
+  "homepage": "https://highqualitycode.github.io/react-vir-tree/",
   "license": "MIT",
-  "repository": "https://github.com/diogofcunha/react-virtualized-tree/",
+  "repository": "https://github.com/HighQualityCode/react-vir-tree",
   "keywords": [
     "react",
     "tree",
