@@ -80,7 +80,7 @@ export default class Tree extends React.Component {
             rowHeight={this._cache.rowHeight}
             rowRenderer={this.measureRowRenderer(nodes)}
             width={width || autoWidth}
-            scrollTop={scrollToIndex}
+            scrollToIndex={scrollToIndex}
             scrollToAlignment={scrollToAlignment}
           />
         )}
