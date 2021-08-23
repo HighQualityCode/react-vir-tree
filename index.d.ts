@@ -104,6 +104,7 @@ export interface FilteringContainerProps {
   groupRenderer?: React.StatelessComponent<GroupRendererProps> | React.Component<GroupRendererProps>;
   onSelectedGroupChange?: (c: string) => void;
   indexSearch: (searchTerm: string, nodes: FlattenedNode[]) => (node: FlattenedNode) => boolean;
+  searchPlaceholder: string;
 }
 
 export class FilteringContainer extends React.Component<FilteringContainerProps> {}
