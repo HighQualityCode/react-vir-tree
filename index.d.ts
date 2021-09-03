@@ -105,6 +105,7 @@ export interface FilteringContainerProps {
   onSelectedGroupChange?: (c: string) => void;
   indexSearch: (searchTerm: string, nodes: FlattenedNode[]) => (node: FlattenedNode) => boolean;
   searchPlaceholder: string;
+  autoFocus?: boolean;
 }
 
 export class FilteringContainer extends React.Component<FilteringContainerProps> {}

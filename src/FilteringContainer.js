@@ -58,6 +58,13 @@ export default class FilteringContainer extends React.Component {
     this.setFilterTerm();
   };
 
+  componentDidMount() {
+    const {autoFocus} = this.props;
+    if (autoFocus && this.filterInput) {
+      this.filterInput.focus();
+    }
+  }
+
   render() {
     const {filterTerm, filterText} = this.state;
     const {
@@ -83,7 +90,14 @@ export default class FilteringContainer extends React.Component {
     return (
       <div className="tree-filter-container">
         <div className={classNames('tree-lookup-input', {group: !!groups})}>
-          <input value={filterText} onChange={this.handleFilterTextChange} placeholder={searchPlaceholder} />
+          <input
+            value={filterText}
+            onChange={this.handleFilterTextChange}
+            placeholder={searchPlaceholder}
+            ref={input => {
+              this.filterInput = input;
+            }}
+          />
           {filterText && (
             <div onClick={this.handleFilterTextClear} className="close-btn">
               <svg class="close-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
