@@ -52,6 +52,12 @@ export default class FilteringContainer extends React.Component {
     this.setFilterTerm();
   };
 
+  handleFilterTextClear = () => {
+    const filterText = '';
+    this.setState({filterText});
+    this.setFilterTerm();
+  };
+
   render() {
     const {filterTerm, filterText} = this.state;
     const {
@@ -78,7 +84,13 @@ export default class FilteringContainer extends React.Component {
       <div className="tree-filter-container">
         <div className={classNames('tree-lookup-input', {group: !!groups})}>
           <input value={filterText} onChange={this.handleFilterTextChange} placeholder={searchPlaceholder} />
-          <i aria-hidden="true" className="mi mi-11 mi-search" />
+          {filterText && (
+            <div onClick={this.handleFilterTextClear} className="close-btn">
+              <svg class="close-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </div>
+          )}
           {groups && <GroupRenderer groups={groups} selectedGroup={selectedGroup} onChange={onSelectedGroupChange} />}
         </div>
         {treeRenderer({nodes: filteredNodes, nodeParentMappings})}
